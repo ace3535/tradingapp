@@ -32,6 +32,11 @@ MAX_OPEN_POSITIONS = 5
 MIN_HOLD_SECONDS = 300
 COOLDOWN_SECONDS = 600
 
+# Profit harvester thresholds (unrealized P/L as fraction of cost basis)
+TAKE_PROFIT_PCT = 0.02   # +2%
+STOP_LOSS_PCT = -0.05    # -5%
+HARVEST_POLL_SECONDS = 30
+
 if not API_KEY or not SECRET_KEY:
     sys.exit("Missing Alpaca keys. Set ALPACA_API_KEY and ALPACA_SECRET_KEY in .env.")
 
